@@ -16,7 +16,12 @@ fn main() {
         "12 drummers drumming"
     ];
 
+    let mut count = 0;
+
     for day in days {
         println!("On the {day} day of christmas my true love gave to me");
+        let gift = gifts[count];
+        println!("{gift}");
+        count += 1;
     }
 }
