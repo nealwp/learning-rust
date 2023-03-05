@@ -2,7 +2,7 @@ fn main() {
     let days = ["first", "second", "third", "fourth", "fifth", "sixth", "seventh", "eighth", "ninth", "tenth", "eleventh", "twelfth"];
     
     let gifts = [
-        "a patridge in a pear tree",
+        "a patridge in a pear tree\n",
         "2 turtle doves, and",
         "3 french hens",
         "4 calling birds",
