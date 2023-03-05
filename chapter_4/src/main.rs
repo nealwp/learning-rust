@@ -1,10 +1,10 @@
 fn main() {
     
-    let some_string = String::from("yours");
+    let mut some_string = String::from("yours");
     
-    change(&some_string);
+    change(&mut some_string);
 }
 
-fn change(s: &String) {
+fn change(s: &mut String) {
     s.push_str(", just kidding");
 }
