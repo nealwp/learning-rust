@@ -1,7 +1,8 @@
 fn main() {
-    let mut s = String::from("hello world");
-    s.push_str(", the earth say hello!");
-    println!("{}", s);
+    let s1 = String::from("hello world");
+    let s2 = s1;
+    
+    println!("{}", s1);
 }
 
 
