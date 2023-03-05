@@ -1,8 +1,15 @@
 fn main() {
-    // arrays have fixed size
-    // declare size in type declaration
-    let a: [i32; 5] = [1, 2, 3, 4, 5];
+    let y = {
+        let x = 3;
+        x + 1 
+    };
 
-    // fill an array
-    let b = [27; 5]
+    println!("y is equal to {y}");
+
+    let z = {
+        let x = 3;
+        x + 1;  // adding this semi-colon changes this from an expression to a statement.
+    };
+
+    println!("z is equal to {z}");
 }
