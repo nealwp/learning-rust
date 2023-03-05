@@ -2,12 +2,40 @@ use rand::Rng;
 use std::{cmp::Ordering, io};
 
 fn main() {
-    println!("Guess the number!");
+    println!("Guess the number! It will be between 1 and 100!");
 
     let secret_number = rand::thread_rng().gen_range(1..=100);
 
+    let mut player_1 = String::new();
+    let mut player_2 = String::new();
+
+    println!("Enter player 1 name:");
+
+    io::stdin()
+        .read_line(&mut player_1)
+        .expect("Enter a name");
+
+    let player_1 = player_1.trim();
+
+    println!("Enter player 2 name:");
+
+    io::stdin()
+        .read_line(&mut player_2)
+        .expect("Enter a name");
+
+    let player_2 = player_2.trim();
+
+    let mut active_player = &player_2;
+
     loop {
-        println!("Please input your guess.");
+        
+        if active_player == &player_2 {
+            active_player = &player_1;
+        } else {
+            active_player = &player_2;
+        }
+
+        println!("{active_player}'s turn. Please input your guess.");
 
         let mut guess = String::new();
 
@@ -20,13 +48,13 @@ fn main() {
             Err(_) => continue,
         };
 
-        println!("You guessed: {guess}");
+        println!("{active_player} guessed: {guess}");
 
         match guess.cmp(&secret_number) {
-            Ordering::Less => println!("too small!"),
-            Ordering::Greater => println!("too big"),
+            Ordering::Less => println!("too small..."),
+            Ordering::Greater => println!("too big..."),
             Ordering::Equal => {
-                println!("you win");
+                println!("{active_player} wins!!!");
                 break;
             }
         }
