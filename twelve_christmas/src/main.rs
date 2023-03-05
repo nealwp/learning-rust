@@ -3,7 +3,7 @@ fn main() {
     
     let gifts = [
         "a patridge in a pear tree",
-        "2 turtle doves",
+        "2 turtle doves, and",
         "3 french hens",
         "4 calling birds",
         "5 golden rings",
@@ -20,8 +20,14 @@ fn main() {
 
     for day in days {
         println!("On the {day} day of christmas my true love gave to me");
-        let gift = gifts[count];
-        println!("{gift}");
+
+        for index in (0..12).rev() {
+            if index > count {
+                continue;
+            }
+            let gift = gifts[index];
+            println!("{gift}");
+        }
         count += 1;
     }
 }
