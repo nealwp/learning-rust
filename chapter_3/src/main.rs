@@ -1,12 +1,27 @@
 fn main() {
-    let mut counter = 0;
-    let result = loop {
-        counter += 1;
+    let mut count = 0;
+    
+    'counting_up: loop {
+        println!("{count}");
 
-        if counter == 10 {
-            break counter * 2
+        let mut remaining = 10;
+
+        loop {
+            println!("remaining = {remaining}");
+            
+            if remaining == 9 {
+                break;
+            }
+
+            if count == 2 {
+                break 'counting_up;
+            }
+
+            remaining -= 1;
         }
-    };
 
-    println!("the result is {result}");
+        count += 1;
+    }
+
+    println!("the result is {count}");
 }
