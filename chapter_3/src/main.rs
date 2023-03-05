@@ -1,15 +1,12 @@
 fn main() {
-    let y = {
-        let x = 3;
-        x + 1 
+    let mut counter = 0;
+    let result = loop {
+        counter += 1;
+
+        if counter == 10 {
+            break counter * 2
+        }
     };
 
-    println!("y is equal to {y}");
-
-    let z = {
-        let x = 3;
-        x + 1;  // adding this semi-colon changes this from an expression to a statement.
-    };
-
-    println!("z is equal to {z}");
+    println!("the result is {result}");
 }
