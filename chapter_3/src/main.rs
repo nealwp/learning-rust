@@ -1,21 +1,13 @@
 fn main() {
+    let tup: (i32, bool, f32) = (-16, true, 17.8);
 
-    /* 
-    integer types 
-        i8      u8
-        i16     u16
-        i32     u32
-        i64     u64
-        i128    u128
-        isize   usize
-     */
+    // can destructure a tuple
+    let (x, y, z) = tup;
 
-    /* 
-    integer literals
-        dec     98_222
-        hex     0xff
-        octal   0o77
-        Binary  0b1111_0000
-        byte    b'A'
-     */
+    println!("the value of y is {y}");
+
+    // or index with .
+    let negative_sixteen = tup.0;
+
+    println!("the value of tup.0 is {negative_sixteen}");
 }
