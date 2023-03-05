@@ -2,12 +2,9 @@ fn main() {
     
     let some_string = String::from("yours");
     
-    let len = calculate_length(&some_string);
-
-    println!("the length of {} is {}", some_string, len); 
-
+    change(&some_string);
 }
 
-fn calculate_length(s: &String) -> usize {
-    s.len()
+fn change(s: &String) {
+    s.push_str(", just kidding");
 }
