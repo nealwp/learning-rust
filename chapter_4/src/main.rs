@@ -2,9 +2,8 @@ fn main() {
     
     let mut some_string = String::from("yours");
     
-    change(&mut some_string);
-}
+    let r1 = &mut some_string;
+    let r2 = &mut some_string;
 
-fn change(s: &mut String) {
-    s.push_str(", just kidding");
+    println!("{}, {}", r1, r2);
 }
