@@ -1,13 +1,21 @@
-const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
-
 fn main() {
-    let x = 5;
-    let x = x + 1;
 
-    {
-        let x = x * 2;
-        println!("The value of x in inner scope is {x}");
-    }
+    /* 
+    integer types 
+        i8      u8
+        i16     u16
+        i32     u32
+        i64     u64
+        i128    u128
+        isize   usize
+     */
 
-    println!("the value of x is {x}");
+    /* 
+    integer literals
+        dec     98_222
+        hex     0xff
+        octal   0o77
+        Binary  0b1111_0000
+        byte    b'A'
+     */
 }
