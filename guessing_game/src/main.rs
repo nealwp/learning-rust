@@ -11,6 +11,7 @@ fn main() {
 
     let mut player_1 = String::new();
     let mut player_2 = String::new();
+    
 
     println!("Enter player 1 name:");
 
@@ -19,6 +20,7 @@ fn main() {
         .expect("Enter a name");
 
     let player_1 = player_1.trim();
+    let mut active_player = &player_1;
 
     println!("Enter player 2 name:");
 
@@ -27,8 +29,6 @@ fn main() {
         .expect("Enter a name");
 
     let player_2 = player_2.trim();
-
-    let mut active_player = &player_2;
 
     loop {
         
