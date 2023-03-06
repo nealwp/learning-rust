@@ -2,9 +2,12 @@ use rand::Rng;
 use std::{cmp::Ordering, io};
 
 fn main() {
-    println!("Guess the number! It will be between 1 and 100!");
 
-    let secret_number = rand::thread_rng().gen_range(1..=100);
+    const MAX_NUMBER: u32 = 300;
+
+    println!("Guess the number! It will be between 1 and {MAX_NUMBER}!");
+
+    let secret_number = rand::thread_rng().gen_range(1..=MAX_NUMBER);
 
     let mut player_1 = String::new();
     let mut player_2 = String::new();
